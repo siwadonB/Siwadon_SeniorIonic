@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class ="title">
+      <!-- <p class="title">Questionnaire for depression</p> -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-style">
+  <ion-item>
+  <h1 class="main">Depression</h1>
+  <ion-img class="icon" src="../../assets/icon/q.png "></ion-img>
+  </ion-item>
+  
+  <h1 class="sub">Questionnaire for depression</h1>
+  <h1 class="regis">Register</h1>
+  <ion-list class="list1">
+    <ion-item > 
+      <ion-img class="icon1" src="../../assets/icon/email.png "></ion-img>
+      <ion-input type="text" [(ngModel)]="user_name" placeholder="Email"></ion-input>
+    </ion-item>
+    
+    <ion-item >
+        <ion-img class="icon1" src="../../assets/icon/lock.png "></ion-img>
+      <ion-input type="password" [(ngModel)]="user_password" placeholder="Password"></ion-input>
+    </ion-item>
+    
+    <ion-item >
+      <ion-img class="icon1" src="../../assets/icon/confirm.png "></ion-img>
+    <ion-input type="password"[(ngModel)]="user_cpassword" placeholder="Confirm password"></ion-input>
+  </ion-item>
+  
+  <ion-item > 
+    <ion-img class="icon1" src="../../assets/icon/age.png "></ion-img>
+    <ion-input type="number" [(ngModel)]="age" placeholder="Age"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-img class="icon1" src="../../assets/icon/sex.png "></ion-img>
+    <ion-label>Sex </ion-label>
+   <ion-input type="text" [(ngModel)]="sex"> 
+   <ion-select>
+      <ion-select-option>Male</ion-select-option>
+      <ion-select-option>Female</ion-select-option>
+    </ion-select>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-img class="icon1" src="../../assets/icon/user.png "></ion-img>
+  <ion-label>Job </ion-label>
+ <ion-input type="text" [(ngModel)]="job"> 
+ <ion-select>
+   <ion-select-option  [(ngModel)]="student">Student</ion-select-option>
+    <ion-select-option>Teacher</ion-select-option>
+    <ion-select-option>Other</ion-select-option>
+  </ion-select>
+  </ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-img class="icon1" src="../../assets/icon/user.png "></ion-img>
+<ion-label>School( of MFU ) </ion-label>
+<ion-input type="text" [(ngModel)]="school"> 
+<ion-select>
+  <ion-select-option>Information Technology</ion-select-option>
+  <ion-select-option>Sinology</ion-select-option>
+  <ion-select-option>Law</ion-select-option>
+  <ion-select-option>Other</ion-select-option>
+</ion-select>
+</ion-input>
+</ion-item>
+
+  
+ 
+  <ion-button class="button1" (click)="register()">Sign up</ion-button>
+
+
+
+</ion-list>

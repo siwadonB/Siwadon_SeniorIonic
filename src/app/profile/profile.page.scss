@@ -1,0 +1,79 @@
+.title{
+    // background-image: linear-gradient(to left, #ffffff, #eff0fc, #d9e2fa, #bed5f8, #9dcaf4);
+    background-image: #F0F0F0;
+}
+.bg-style {
+    // background-image: linear-gradient(to left bottom, #ffffff, #f3f3fd, #e4e8fb, #d3defa, #bed5f8, #afcef7, #9ec8f6, #8cc2f5, #7fbcf6, #72b6f7, #63b0f7, #54aaf8);
+    background-image:linear-gradient(to bottom, #F0F0F0 33%, #77d2e5 100%);
+}
+.main{
+    font-family: Georgia;
+    font-size: 30px;
+    margin-top:50px;
+    margin-left:20%;
+    color:#606060;
+}
+.sub{
+    text-align: right;
+    font-size: 12px;
+    font-family: Georgia;
+    margin-right:20px;
+    color:#606060;
+}
+.icon{
+    width: 45px;
+    height:45px;
+    margin-left: 15px;
+    margin-top:40px;
+}
+.regis{
+    font-size:22px;
+    font-family: Georgia;
+    color:#606060;
+    margin:0px 0px 20px 20px;
+}
+.list1{
+    border-radius: 30px ;
+    // padding:10px 100px 10px 100px ;
+    border: 1px solid grey;
+    // box-shadow: 2px 2px 2px grey;
+    margin-bottom:150px;
+    margin-left:18%;
+    height: 390px;
+    width: 250px;  
+    font-family: Georgia;
+    background:#f2f2f2;
+}
+.icon1 {
+    width:40px;
+    height:40px;
+    padding-right:20px;
+}
+ion-item{
+    ion-input{
+        color:#606060;
+        font-size:14px;
+        width: 175px;
+        font-family: Georgia;
+    }
+    ion-label{
+        color:#606060;
+        font-size:14px;
+        width: 175px;
+        font-family: Georgia;
+    }
+    ion-select-option{
+        color:#606060;
+        font-size:14px;
+        width: 175px;
+        font-family: Georgia;
+    }
+}
+.button1{
+    --color: white;
+    --background:#ff944d;
+    --border-radius: 10px;
+    border: 1px  ;
+    font-family: Georgia;
+    margin:30px 0px 0px 70px;
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-style">
+  <ion-item>
+    <h1 class="main">Depression</h1>
+    <ion-img class="icon" src="../../assets/icon/q.png "></ion-img>
+  </ion-item>
+
+  <h1 class="sub">Questionnaire for depression</h1>
+  <h1 class="profile">Profile</h1>
+
+  <ion-list class="list1">
+    <div id="profile-name" [(ngModel)]="user_name">
+      <ion-item>
+        <ion-img class="icon1" src="../../assets/icon/email.png "></ion-img>
+        <p>{{ user_name }}</p>
+      </ion-item>
+    </div>
+
+    <div id="profile-password" [(ngModel)]="user_password">
+    <ion-item>
+      <ion-img class="icon1" src="../../assets/icon/lock.png "></ion-img>
+      <p>{{ user_password }}</p>
+    </ion-item>
+    </div>
+
+    <div id="profile-age" [(ngModel)]="age">
+    <ion-item>
+      <ion-img class="icon1"  src="../../assets/icon/age.png "></ion-img>
+      <p>{{ age }}</p>
+    </ion-item>
+    </div>
+
+    <div id="profile-sex" [(ngModel)]="sex">
+    <ion-item>
+      <ion-img class="icon1"  src="../../assets/icon/sex.png "></ion-img>
+      <p>{{ sex }}</p>
+    </ion-item>
+    </div>
+
+    <div id="profile-job" [(ngModel)]="job">
+    <ion-item>
+      <ion-img class="icon1" src="../../assets/icon/user.png "></ion-img>
+      <p>{{ job }}</p>
+    </ion-item>
+  </div>
+
+    <ion-item>
+      <ion-button routerLink="/edit-profile">Edit Profile</ion-button>
+    </ion-item>
+
+    <ion-item>
+        <ion-button routerLink="/question">Questionnaire</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button routerLink="/login">Log out</ion-button>
+      </ion-item>
+
+  </ion-list>
+  </ion-content>

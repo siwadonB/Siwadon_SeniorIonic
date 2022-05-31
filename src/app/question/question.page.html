@@ -1,0 +1,275 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">
+      <!-- <p class="title">Questionnaire for depression</p> -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-style">
+    <ion-grid>
+  <ion-item>
+    <h1 class="main">Depression</h1>
+    <ion-img class="icon" src="../../assets/icon/q.png "></ion-img>
+  </ion-item>
+
+  <h1 class="sub">User Test1234</h1>
+  <h1 class="q">Question</h1>
+
+
+  
+
+  <div class= "ion-text-wrap"	>
+
+      
+
+       
+
+   <ion-item-sliding *ngFor = "let q of Questionlist ; let i = index" >
+    <p>{{ q.qname }}</p>
+  
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <ion-item text-wrap >
+            <ion-radio mode="md" item-left value={q.ansp} (ionSelect)="mcqAnswer(q.ansp,i)"></ion-radio>
+            <ion-label> {{q.ans }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item text-wrap>
+            <ion-radio mode="md" item-left value={q.ans1p} (ionSelect)="mcqAnswer(q.ans1p,i)" ></ion-radio>
+            <ion-label>{{q.ans1 }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item text-wrap>
+            <ion-radio mode="md" item-left [value] = "q.ans2p" (ionSelect)="mcqAnswer(q.ans2p,i)"></ion-radio>
+            <ion-label class=  "text-wrap">{{ q.ans2 }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item text-wrap>
+            <ion-radio mode="md" item-left value="{{q.ans3p}}" (ionSelect)="mcqAnswer(q.ans3p,i)"></ion-radio>
+            <ion-label>{{q.ans3 }}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+  </ion-item-sliding>
+  </div>
+
+
+  <ion-button class="button2" (click)="onResult()" >save</ion-button>
+  <!-- <ion-button class="button3" (click)="getSummary()" >range</ion-button> -->
+
+  <!-- <ibutton ion-button color="btn" (click)="fnGotoNewArrivalList(q.name,q.ansp,q.ans1p)">Order Now</button>  -->
+
+<!-- </ion-grid>
+  <ion-button class="button1" (click)="gotoResult()"  >result</ibutton> 
+
+  </ion-grid>
+  </ion-content>
+
+ <ion-list class="list">
+    <ul id=list1></ul>
+
+
+    <div>
+      <p> {{ qnum.qnum}} {{ qname.qname }}</p>
+    
+    </div>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="A" ngFor="let ans of ans | async"></ion-radio>
+            <ion-label> {{ ans.ans }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="B" ngFor="let ans1 of ans1 | async"></ion-radio>
+            <ion-label>{{ ans1.ans1 }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="C" ngFor="let ans2 of ans2 | async"></ion-radio>
+            <ion-label>{{ ans2.ans2 }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="D" ngFor="let ans3 of ans3 | async"></ion-radio>
+            <ion-label>{{ ans3.ans3 }}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <hr />
+
+    <div id="Q2" ngFor="let qnum of qnum | async" ngFor="let qname of qname | async">
+      <p> {{ qnum.qnum }} {{ qname.qname }}</p>
+    </div>
+
+    <ion-radio-group>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="A" ngFor="let ans of ans | async"></ion-radio>
+            <ion-label> {{ans.ans}}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="B" ngFor="let ans1 of ans1 | async"></ion-radio>
+            <ion-label>{{ans1.ans1}}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="C" ngFor="let ans2 of ans2 | async"></ion-radio>
+            <ion-label>{{ans2.ans2}}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-radio mode="md" item-left value="D" ngFor="let ans3 of ans3 | async"></ion-radio>
+            <ion-label>{{ans3.ans3}}</ion-label>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+    </ion-radio-group>
+
+    <hr />
+
+
+     Q3 -->
+
+    <!-- <ion-radio-group>
+    <ion-label>3. Bored food?</ion-label>
+      <ion-row>
+        <ion-col>
+             <ion-item>
+                <ion-radio mode="md" item-left value="A"></ion-radio>
+                <ion-label>Never</ion-label>
+           </ion-item>
+         </ion-col>
+    
+        <ion-col>
+            <ion-item>
+                <ion-radio mode="md" item-left value="B"></ion-radio>
+                <ion-label>Some day</ion-label>
+           </ion-item>
+        </ion-col>
+    
+        <ion-col>
+            <ion-item>                    
+                <ion-radio mode="md" item-left value="C"></ion-radio>
+                <ion-label>often</ion-label>
+           </ion-item>
+        </ion-col>
+
+        <ion-col>
+            <ion-item>   
+                <ion-radio mode="md" item-left value="D"></ion-radio>
+                <ion-label >Everydays</ion-label>
+           </ion-item>
+        </ion-col>
+    
+    </ion-row>
+    </ion-radio-group>
+
+ 
+    <hr/> -->
+
+    <!-- Q4
+ 
+    <ion-radio-group>
+        <ion-label>4. Feel disappoionted in yourself?</ion-label>
+          <ion-row>
+            <ion-col>
+                 <ion-item>
+                    <ion-radio mode="md" item-left value="A"></ion-radio>
+                    <ion-label>Never</ion-label>
+               </ion-item>
+             </ion-col>
+        
+            <ion-col>
+                <ion-item>
+                    <ion-radio mode="md" item-left value="B"></ion-radio>
+                    <ion-label>Some day</ion-label>
+               </ion-item>
+            </ion-col>
+        
+            <ion-col>
+                <ion-item>                    
+                    <ion-radio mode="md" item-left value="C"></ion-radio>
+                    <ion-label>often</ion-label>
+               </ion-item>
+            </ion-col>
+    
+            <ion-col>
+                <ion-item>   
+                    <ion-radio mode="md" item-left value="D"></ion-radio>
+                    <ion-label >Everydays</ion-label>
+               </ion-item>
+            </ion-col>
+        
+        </ion-row>
+        </ion-radio-group>
+ 
+        <hr/> -->
+    <!-- Q5
+
+        <ion-radio-group>
+            <ion-label>5. Think about hurt yourself?</ion-label>
+              <ion-row>
+                <ion-col>
+                     <ion-item>
+                        <ion-radio mode="md" item-left value="A"></ion-radio>
+                        <ion-label>Never</ion-label>
+                   </ion-item>
+                 </ion-col>
+            
+                <ion-col>
+                    <ion-item>
+                        <ion-radio mode="md" item-left value="B"></ion-radio>
+                        <ion-label>Some day</ion-label>
+                   </ion-item>
+                </ion-col>
+            
+                <ion-col>
+                    <ion-item>                    
+                        <ion-radio mode="md" item-left value="C"></ion-radio>
+                        <ion-label>often</ion-label>
+                   </ion-item>
+                </ion-col>
+        
+                <ion-col>
+                    <ion-item>   
+                        <ion-radio mode="md" item-left value="D"></ion-radio>
+                        <ion-label >Everydays</ion-label>
+                   </ion-item>
+                </ion-col>
+            
+            </ion-row>
+            </ion-radio-group> -->
+
+    <!-- s<ion-button class="button1" href="/result">Next</ion-button> -->
+

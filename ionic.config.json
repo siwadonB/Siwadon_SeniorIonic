@@ -1,0 +1,7 @@
+{
+  "name": "senier",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

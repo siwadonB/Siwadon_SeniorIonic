@@ -1,0 +1,50 @@
+.title{
+    // background-image: linear-gradient(to left, #ffffff, #eff0fc, #d9e2fa, #bed5f8, #9dcaf4);
+    background-image: #F0F0F0;
+}
+.bg-style {
+    // background-image: linear-gradient(to left bottom, #ffffff, #f3f3fd, #e4e8fb, #d3defa, #bed5f8, #afcef7, #9ec8f6, #8cc2f5, #7fbcf6, #72b6f7, #63b0f7, #54aaf8);
+    background-image:linear-gradient(to bottom, #F0F0F0 33%, #77d2e5 100%);
+}
+.main{
+    font-family: Georgia;
+    font-size: 30px;
+    margin-top:50px;
+    margin-left:20%;
+    color:#606060;
+}
+.sub{
+    text-align: right;
+    font-size: 12px;
+    font-family: Georgia;
+    margin-right:20px;
+    color:#606060;
+}
+.icon{
+    width: 45px;
+    height:45px;
+    margin-left: 15px;
+    margin-top:40px;
+}
+ion-button.login.button{
+    --color: #606060;
+    --background: #F0F0F0;
+    --border-radius: 25px;
+    --padding:15px 25px 15px 25px;
+    --border: 1px solid black ;
+    margin-top:145px;
+    position: fixed;
+    left:38%;
+    --font-family: Georgia;
+}
+ion-button.register.button{
+    --background:#F0F0F0;
+    --border-radius: 25px;
+    --color: #606060;
+    --border: 1px solid black ;
+    --padding:15px 25px 15px 25px;
+    margin-top:245px;
+    position: fixed;
+    left:34%;
+    --font-family: Georgia;
+}
